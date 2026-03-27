@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:#F3EFEA;
+    display: flex;
+}
+
+.profile-card {
+    background: #E6DCD1;
+    color: #2F2A25; ;
+    width: 280px;
+    height: 100vh;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(210, 188, 19, 0.697);
+    overflow: hidden;
+}
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.main-content {
+    padding: 40px;
+    flex: 1;
+}
+
+.student-name {
+    margin: 0;
+    font-size: 32px;
+}
+
+.navbar {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.navbar a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.navbar a:hover {
+    color: #4a63e7;
+    border-bottom: 2px solid #4a63e7;
+}
+
+.card {
+    background: #EFE6DB;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-box {
+    background: #E1D3C1;
+    color: #3A2F28;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.navbar a.active {
+    color: #4a63e7;
+    border-bottom: 2px solid #4a63e7;
+}
+a{
+    color: #1F6AE1;
+}
+a:hover{
+    color: #144BB8;
+}
+h1,h2,h3{
+    color: #1F3A5F;
+}
