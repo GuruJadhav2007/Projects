@@ -1,0 +1,37 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Oil & Gas</span><span>›</span><span>Production Chemicals</span></div>
+      <h1>Production Chemicals</h1>
+      <p>Project supplies a range of production / oilfield chemicals engineered to enhance production performance.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Oil & Gas — Production</span>
+      <h2 class="section-title">Oilfield Production Chemical Solutions</h2>
+      <p class="section-subtitle">Our production chemicals are engineered to maximise oilfield productivity, reduce operational costs, and protect your assets from corrosion, scaling, and flow assurance issues.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Production</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Looking for tailored production chemical solutions?</h3>
+        <p>Our experts can formulate custom solutions to your specific field conditions and operational challenges.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a routerLink="/contact" class="btn btn-primary">Contact Our Team</a>
+          <a routerLink="/industries/custom-manufacturing" class="btn btn-outline" style="border-color:white;color:white;">Custom Solutions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

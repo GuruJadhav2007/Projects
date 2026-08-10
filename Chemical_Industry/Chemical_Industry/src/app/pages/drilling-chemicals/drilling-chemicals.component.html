@@ -1,0 +1,39 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Oil & Gas</span><span>›</span><span>Drilling Chemicals</span></div>
+      <h1>Drilling Chemicals</h1>
+      <p>Project supplies a range of drilling fluid additives engineered to enhance drilling performance.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Oil & Gas — Drilling</span>
+      <h2 class="section-title">Advanced Drilling Fluid Additives</h2>
+      <p class="section-subtitle">Our comprehensive range of drilling fluid additives is engineered to address the most challenging downhole conditions, improving efficiency, safety, and well bore integrity.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top">
+          <span class="pc-tag">Drilling</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Need a custom drilling chemical solution?</h3>
+        <p>Our R&D team can develop application-specific formulations tailored to your well conditions.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a routerLink="/contact" class="btn btn-primary">Get In Touch</a>
+          <a routerLink="/industries/custom-manufacturing" class="btn btn-outline" style="border-color:white;color:white;">Custom Manufacturing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

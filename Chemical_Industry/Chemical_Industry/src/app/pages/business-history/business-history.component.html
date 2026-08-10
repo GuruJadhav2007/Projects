@@ -1,0 +1,31 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><a routerLink="/">Overview</a><span>›</span><span>Business History</span></div>
+      <h1>Business History</h1>
+      <p>PROJECT was incorporated in 2012 in India, beginning as a research and development organization.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title">From Inception to Innovation</h2>
+      <p class="section-subtitle">Key milestones that define our growth from a R&D startup to a full-scale specialty chemical manufacturer.</p>
+    </div>
+    <div class="history-timeline">
+      <div class="history-line"></div>
+      <div class="history-item reveal" *ngFor="let t of timeline; let i = index" [class.right]="i%2!==0">
+        <div class="history-content">
+          <div class="h-year">{{ t.year }}</div>
+          <div class="h-icon">{{ t.icon }}</div>
+          <h3>{{ t.event }}</h3>
+          <p>{{ t.detail }}</p>
+        </div>
+        <div class="h-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>

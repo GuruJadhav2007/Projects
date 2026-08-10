@@ -1,0 +1,54 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Custom Manufacturing</span></div>
+      <h1>Custom Manufacturing</h1>
+      <p>Contract research, development and manufacturing services tailored to your specific chemical requirements.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Custom Manufacturing</span>
+      <h2 class="section-title">Your Trusted Contract Manufacturing Partner</h2>
+      <p class="section-subtitle">As a contract research and manufacturing organization, our portfolio is large enough to cater to requirements of various petroleum, chemical and pharmaceutical companies — offering committed intermediates and product support.</p>
+    </div>
+    <div class="capabilities-grid">
+      <div class="cap-card reveal" *ngFor="let c of capabilities">
+        <div class="cap-icon">{{c.icon}}</div>
+        <h3>{{c.t}}</h3>
+        <p>{{c.d}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Process</span>
+      <h2 class="section-title" style="color:white;">From Concept to Commercial Scale</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card reveal" *ngFor="let p of process; let i = index" [style.animation-delay]="(i*0.1)+'s'">
+        <div class="process-num">{{p.step}}</div>
+        <h4>{{p.t}}</h4>
+        <p>{{p.d}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Have a custom chemical project in mind?</h3>
+        <p>Partner with our R&D and manufacturing team to bring your specialty chemical product to market.</p>
+        <a routerLink="/contact" class="btn btn-primary">Start a Project</a>
+      </div>
+    </div>
+  </div>
+</section>

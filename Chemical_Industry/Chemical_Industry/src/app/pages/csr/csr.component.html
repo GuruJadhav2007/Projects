@@ -1,0 +1,33 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><a routerLink="/">Overview</a><span>›</span><span>CSR</span></div>
+      <h1>Corporate Social Responsibilities</h1>
+      <p>Our commitment to society, the environment, and the communities we serve.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">CSR</span>
+      <h2 class="section-title">Giving Back to Society</h2>
+      <p class="section-subtitle">At Project, corporate responsibility is not just a policy — it is embedded in how we conduct business every day.</p>
+    </div>
+    <div class="csr-grid">
+      <div class="csr-card reveal" *ngFor="let c of [
+        {icon:'🌿',t:'Environmental Stewardship',d:'We follow environmentally responsible manufacturing practices to minimize our ecological footprint. Our processes are designed to reduce waste, conserve energy, and prevent pollution.'},
+        {icon:'👥',t:'Community Development',d:'We actively contribute to the development of local communities near our manufacturing facility in City, State — supporting education, healthcare, and livelihood initiatives.'},
+        {icon:'🎓',t:'Education & Skill Development',d:'We provide opportunities for internships, apprenticeships, and technical training to students and fresh graduates, nurturing the next generation of chemists and engineers.'},
+        {icon:'🏥',t:'Health & Safety Culture',d:'Promoting a culture of health and safety not only within our facility but also across our supply chain and the communities we operate in.'},
+        {icon:'♻️',t:'Sustainable Manufacturing',d:'Committed to developing chemicals that are effective, safe, and biodegradable wherever possible — contributing to a greener chemical industry.'},
+        {icon:'🤝',t:'Ethical Business',d:'We uphold the highest standards of ethical conduct, transparency, and fair practices in all our stakeholder relationships.'}
+      ]">
+        <div class="csr-icon">{{c.icon}}</div>
+        <h3>{{c.t}}</h3>
+        <p>{{c.d}}</p>
+      </div>
+    </div>
+  </div>
+</section>

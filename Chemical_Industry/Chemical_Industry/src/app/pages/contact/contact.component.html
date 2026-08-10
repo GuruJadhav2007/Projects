@@ -1,0 +1,108 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Contact Us</span></div>
+      <h1>Get In Touch</h1>
+      <p>We'd love to hear from you. Reach out for inquiries, partnerships, or general questions.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-cards-grid reveal">
+      <div class="contact-card">
+        <div class="cc-icon">📍</div>
+        <h3>Visit Us</h3>
+        <p>123 Industrial Area,<br>Industrial Zone, City,<br>State, Country</p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📞</div>
+        <h3>Call Us</h3>
+        <p><a href="tel:0000000000">000-0000000</a><br><a href="tel:0000000000">+91 00000 00000</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">✉️</div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:info@project.com">info&#64;project.com</a><br><a href="mailto:hrd@project.com">hrd&#64;project.com</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">🕒</div>
+        <h3>Business Hours</h3>
+        <p>Monday – Saturday<br>9:00 AM – 6:00 PM IST</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-main-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <div class="map-placeholder">
+          <div class="map-content">
+            <span>🗺️</span>
+            <h3>Project Pvt. Ltd.</h3>
+            <p>Industrial Area<br>City, State</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Industrial+Area" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:20px;">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="contact-form-card">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+
+          <div class="form-success" *ngIf="formSuccess">
+            <span>✅</span>
+            <div><strong>Message Sent!</strong><p>Thank you for contacting us. We'll respond shortly.</p></div>
+          </div>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="!formSuccess">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Your name"
+                  [class.error]="formSubmitted && contactForm.get('name')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && contactForm.get('name')?.invalid">Name is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="your@email.com"
+                  [class.error]="formSubmitted && contactForm.get('email')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && contactForm.get('email')?.invalid">Valid email required</span>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" formControlName="phone" placeholder="+91 XXXXX XXXXX"
+                  [class.error]="formSubmitted && contactForm.get('phone')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && contactForm.get('phone')?.invalid">Phone is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" formControlName="company" placeholder="Your company">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject *</label>
+              <input type="text" class="form-control" formControlName="subject" placeholder="What is this regarding?"
+                [class.error]="formSubmitted && contactForm.get('subject')?.invalid">
+              <span class="error-msg" *ngIf="formSubmitted && contactForm.get('subject')?.invalid">Subject is required</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea class="form-control" formControlName="message" placeholder="Type your message here..."
+                [class.error]="formSubmitted && contactForm.get('message')?.invalid"></textarea>
+              <span class="error-msg" *ngIf="formSubmitted && contactForm.get('message')?.invalid">Message is required</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

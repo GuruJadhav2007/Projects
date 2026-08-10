@@ -1,0 +1,45 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><a routerLink="/">Overview</a><span>›</span><span>Vision & Mission</span></div>
+      <h1>Vision & Mission</h1>
+      <p>Influential and knowledge-driven specialty chemical manufacturing with global presence.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="vm-grid">
+      <div class="vm-card vision-card reveal-left">
+        <div class="vm-icon">🔭</div>
+        <h2>Our Vision</h2>
+        <div class="divider divider-left"></div>
+        <p>To be recognized globally as a reliable producer of speciality chemicals for Oil, Gas and Petrochemical sectors.</p>
+        <p>To manufacture quality and consistently diverse specialty chemicals through constant and innovative R&D which is customer centric and has a global reach.</p>
+        <p>To be the complete solution provider, innovator and guide for each client by continuously upgrading the required technology and knowledge about products, processing methods and production facilities.</p>
+      </div>
+      <div class="vm-card mission-card reveal-right">
+        <div class="vm-icon">🎯</div>
+        <h2>Our Mission</h2>
+        <div class="divider divider-left"></div>
+        <blockquote>"To articulate the vision, passionately own it and relentlessly drive it to completion."</blockquote>
+        <p>To understand your needs and design application-specific high value customized products and provide unmatched technical expertise to the industry.</p>
+        <p>We are committed to innovation, quality, and the sustainable success of our clients across every industry we serve.</p>
+      </div>
+    </div>
+    <div class="vm-values reveal" style="margin-top:60px;">
+      <h2 class="section-title" style="text-align:center;margin-bottom:40px;">Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item" *ngFor="let v of [
+          {icon:'⚖️',t:'Integrity',d:'Transparency and ethical practices in all business dealings.'},
+          {icon:'🔬',t:'Innovation',d:'Continuous R&D to develop breakthrough chemical solutions.'},
+          {icon:'🌿',t:'Sustainability',d:'Environmental responsibility in every manufacturing process.'},
+          {icon:'🤝',t:'Customer Focus',d:'Customer-centric approach to every product and service.'}
+        ]">
+          <span>{{v.icon}}</span><h4>{{v.t}}</h4><p>{{v.d}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Fuel Additives</span><span>›</span><span>Refinery Fuel Additives</span></div>
+      <h1>Refinery Fuel Additives</h1>
+      <p>Performance-enhancing additives for refinery-grade fuels, improving quality, stability and regulatory compliance.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Fuel Additives — Refinery</span>
+      <h2 class="section-title">High-Performance Refinery Fuel Additives</h2>
+      <p class="section-subtitle">Our refinery fuel additive range is designed to help refiners meet evolving fuel quality standards, improve engine performance and ensure reliable fuel delivery.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Fuel Additives</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Improve your fuel quality today</h3>
+        <p>Connect with our fuel additives specialists to find the right solution for your refinery operations.</p>
+        <a routerLink="/contact" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>

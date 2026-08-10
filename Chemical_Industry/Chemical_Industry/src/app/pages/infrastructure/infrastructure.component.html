@@ -1,0 +1,44 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><a routerLink="/">Overview</a><span>›</span><span>Infrastructure</span></div>
+      <h1>Infrastructure</h1>
+      <p>Scalable and versatile manufacturing infrastructure with GMP-standard facility.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Facility</span>
+      <h2 class="section-title">World-Class Manufacturing Infrastructure</h2>
+      <p class="section-subtitle">State-of-the-art facility designed to deliver quality chemicals at scale.</p>
+    </div>
+    <div class="infra-grid">
+      <div class="infra-card reveal" *ngFor="let item of [
+        {icon:'🏭',t:'Manufacturing Plant',d:'GMP-standard manufacturing plant commissioned in 2016 with 6000 MT per annum production capacity at the Industrial Area, State.'},
+        {icon:'🔬',t:'R&D Laboratory',d:'Advanced research and development laboratory at the Industrial Area operational since 2013, driving innovation in specialty chemical formulations.'},
+        {icon:'⚗️',t:'Pilot Plant',d:'Dedicated pilot plant facility for scaling molecules from laboratory scale to commercial production seamlessly.'},
+        {icon:'🧪',t:'Quality Control Lab',d:'Fully equipped QC laboratory for in-process and finished product quality analysis and testing.'},
+        {icon:'🏗️',t:'Storage & Warehousing',d:'Modern storage and warehousing facilities designed for safe handling of chemical intermediates and finished products.'},
+        {icon:'🚚',t:'Logistics Network',d:'Dynamic sourcing and logistics platform ensuring effective management of the supply chain across India.'}
+      ]">
+        <div class="infra-icon">{{item.icon}}</div>
+        <h3>{{item.t}}</h3>
+        <p>{{item.d}}</p>
+      </div>
+    </div>
+    <div class="infra-stats reveal">
+      <div class="i-stat" *ngFor="let s of [
+        {v:'6000+',l:'MT Annual Capacity'},
+        {v:'2013',l:'R&D Established'},
+        {v:'2016',l:'Plant Commissioned'},
+        {v:'GMP',l:'Standard Facility'}
+      ]">
+        <div class="i-stat-value">{{s.v}}</div>
+        <div class="i-stat-label">{{s.l}}</div>
+      </div>
+    </div>
+  </div>
+</section>

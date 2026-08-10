@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Oil & Gas</span><span>›</span><span>Lubricant Chemicals</span></div>
+      <h1>Lubricant Chemicals</h1>
+      <p>High-performance lubricant additives engineered for demanding industrial and automotive applications.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Oil & Gas — Lubricants</span>
+      <h2 class="section-title">Advanced Lubricant Additive Chemistry</h2>
+      <p class="section-subtitle">Our lubricant chemical range helps formulators create high-performance lubrication products that extend equipment life, reduce energy consumption, and meet stringent specifications.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Lubricants</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Need specialized lubricant additives?</h3>
+        <p>Our team can formulate customized lubricant packages for your specific application requirements.</p>
+        <a routerLink="/contact" class="btn btn-primary">Contact Our Experts</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Water Treatment</span></div>
+      <h1>Water Treatment</h1>
+      <p>Comprehensive water treatment chemical solutions for industrial, municipal and process water applications.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Water Treatment</span>
+      <h2 class="section-title">Industrial Water Treatment Solutions</h2>
+      <p class="section-subtitle">Our water treatment chemical range supports efficient, safe, and sustainable management of process water, cooling systems, boilers, and wastewater treatment plants.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Water Treatment</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Optimize your water treatment process</h3>
+        <p>Our water treatment specialists can design a customized chemical program for your specific water system.</p>
+        <a routerLink="/contact" class="btn btn-primary">Talk to an Expert</a>
+      </div>
+    </div>
+  </div>
+</section>

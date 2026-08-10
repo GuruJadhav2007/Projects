@@ -1,0 +1,118 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Careers</span></div>
+      <h1>Careers at Project</h1>
+      <p>Join a team of passionate professionals shaping the future of specialty chemicals.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Why Join Us</span>
+      <h2 class="section-title">Build Your Career With Project</h2>
+      <p class="section-subtitle">At Project, our manpower consists of professionals with years of experience in research, development and manufacturing. We are always looking for talented individuals to join our growing team.</p>
+    </div>
+    <div class="careers-values-grid">
+      <div class="cv-card reveal" *ngFor="let v of values">
+        <div class="cv-icon">{{v.icon}}</div>
+        <h3>{{v.t}}</h3>
+        <p>{{v.d}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section departments-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Opportunities</span>
+      <h2 class="section-title" style="color:white;">Departments We Hire For</h2>
+    </div>
+    <div class="dept-tags reveal">
+      <span class="dept-tag" *ngFor="let d of departments">{{d}}</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="career-form-grid">
+      <div class="reveal-left">
+        <span class="section-tag">Apply Now</span>
+        <h2 class="section-title" style="text-align:left;">Submit Your Application</h2>
+        <div class="divider divider-left"></div>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:24px;">
+          Interested in joining our team? Fill out the form and attach your resume details. Our HR team will review your application and reach out for suitable opportunities.
+        </p>
+        <div class="contact-mini">
+          <div class="cm-item"><span>✉️</span> hrd&#64;project.com</div>
+          <div class="cm-item"><span>📞</span> 000-0000000</div>
+          <div class="cm-item"><span>📍</span> City, State, Country</div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="career-form-card">
+          <div class="form-success" *ngIf="formSuccess">
+            <span>✅</span>
+            <div><strong>Application Submitted!</strong><p>Our HR team will review and contact you soon.</p></div>
+          </div>
+
+          <form [formGroup]="careerForm" (ngSubmit)="onSubmit()" *ngIf="!formSuccess">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" formControlName="name" placeholder="Your full name"
+                [class.error]="formSubmitted && careerForm.get('name')?.invalid">
+              <span class="error-msg" *ngIf="formSubmitted && careerForm.get('name')?.invalid">Name is required</span>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="your@email.com"
+                  [class.error]="formSubmitted && careerForm.get('email')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && careerForm.get('email')?.invalid">Valid email required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-control" formControlName="phone" placeholder="+91 XXXXX XXXXX"
+                  [class.error]="formSubmitted && careerForm.get('phone')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && careerForm.get('phone')?.invalid">Phone is required</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Department of Interest *</label>
+              <select class="form-control" formControlName="department"
+                [class.error]="formSubmitted && careerForm.get('department')?.invalid">
+                <option value="">Select Department</option>
+                <option *ngFor="let d of departments">{{d}}</option>
+              </select>
+              <span class="error-msg" *ngIf="formSubmitted && careerForm.get('department')?.invalid">Please select a department</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Years of Experience *</label>
+              <select class="form-control" formControlName="experience"
+                [class.error]="formSubmitted && careerForm.get('experience')?.invalid">
+                <option value="">Select Experience</option>
+                <option>Fresher</option>
+                <option>1-3 Years</option>
+                <option>3-5 Years</option>
+                <option>5-10 Years</option>
+                <option>10+ Years</option>
+              </select>
+              <span class="error-msg" *ngIf="formSubmitted && careerForm.get('experience')?.invalid">Please select experience</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message / Cover Note</label>
+              <textarea class="form-control" formControlName="message" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Application →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

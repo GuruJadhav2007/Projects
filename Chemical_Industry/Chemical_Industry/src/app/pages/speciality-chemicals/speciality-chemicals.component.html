@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Speciality Chemicals & Polymers</span></div>
+      <h1>Speciality Chemicals & Polymers</h1>
+      <p>Project offers a range of speciality chemicals and polymers to customers across diverse industries.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Speciality Chemicals</span>
+      <h2 class="section-title">Speciality Chemicals & Polymer Solutions</h2>
+      <p class="section-subtitle">Our speciality chemicals and polymer portfolio covers a wide range of functional additives, performance polymers, and tailor-made chemical solutions for packaging, coating, and industrial applications.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Speciality</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Need a specialty chemical or polymer solution?</h3>
+        <p>Our polymer and specialty chemical experts can develop custom solutions for your application.</p>
+        <a routerLink="/contact" class="btn btn-primary">Inquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>

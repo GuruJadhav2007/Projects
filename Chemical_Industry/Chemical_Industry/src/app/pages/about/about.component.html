@@ -1,0 +1,63 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:500px;height:500px;top:-200px;right:-100px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a routerLink="/">Home</a><span>›</span><span>About Us</span>
+      </div>
+      <h1>About Project</h1>
+      <p>Committed to research, development and manufacturing of specialty chemicals since 2012.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="about-intro-grid">
+      <div class="reveal-left">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title" style="text-align:left;">Powering Industry Through the Power of Chemistry</h2>
+        <div class="divider divider-left"></div>
+        <p class="body-text">Project Pvt. Ltd. is an organization committed to provide research and development, manufacturing and product support for a spectrum of industries related to oil and natural gas sector, water treatment sector, specialty chemicals and polymers and pharmaceuticals.</p>
+        <p class="body-text">At Project, we believe in the <strong>Power of Chemistry</strong>. We believe in creating enduring products developed through high quality of innovation and efficient manufacturing processes with utmost concern towards the Environment, Health & Safety.</p>
+        <p class="body-text">It is our constant endeavor to live up to this expectation as this is the key to Sustainable Success. Our manpower consists of professionals with many years of experience in the field of research and development and manufacturing of various chemical entities.</p>
+        <p class="body-text">As a contract research and manufacturing organization, our portfolio is large to cater requirements of various petroleum, chemical and pharmaceutical companies to develop their product range by offering committed intermediates and support.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="about-info-card">
+          <h3>Company at a Glance</h3>
+          <div class="info-row"><span class="info-label">Founded</span><span class="info-val">2012</span></div>
+          <div class="info-row"><span class="info-label">Location</span><span class="info-val">City, State, Country</span></div>
+          <div class="info-row"><span class="info-label">Capacity</span><span class="info-val">6000+ MT / Annum</span></div>
+          <div class="info-row"><span class="info-label">Facility</span><span class="info-val">GMP Standard</span></div>
+          <div class="info-row"><span class="info-label">Focus</span><span class="info-val">Oil & Gas, Water, Polymers</span></div>
+          <div class="info-row"><span class="info-label">R&D Since</span><span class="info-val">2013 (the Industrial Area)</span></div>
+          <a routerLink="/contact" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center;">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section strengths-bg-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Strengths</span>
+      <h2 class="section-title" style="color:white;">What Makes Us Different</h2>
+    </div>
+    <div class="strengths-grid-about">
+      <div class="strength-item reveal" *ngFor="let s of [
+        {icon:'🌱', title:'EHS Commitment', desc:'High commitment towards Environment, Health and Safety in every operation.'},
+        {icon:'💡', title:'Innovation Culture', desc:'Vibrant culture of innovation drives our continuous R&D efforts.'},
+        {icon:'🔗', title:'Surfactant Chemistry', desc:'Strong platform for surfactant-based chemistry and formulation expertise.'},
+        {icon:'👥', title:'Expert Manpower', desc:'Trained and dedicated professionals with decades of domain experience.'},
+        {icon:'🏭', title:'Scalable Manufacturing', desc:'Versatile infrastructure capable of scaling from lab to commercial production.'},
+        {icon:'🚚', title:'Efficient Supply Chain', desc:'Dynamic sourcing and logistics ensuring reliable supply to our customers.'}
+      ]">
+        <span class="s-icon">{{s.icon}}</span>
+        <h3>{{s.title}}</h3>
+        <p>{{s.desc}}</p>
+      </div>
+    </div>
+  </div>
+</section>

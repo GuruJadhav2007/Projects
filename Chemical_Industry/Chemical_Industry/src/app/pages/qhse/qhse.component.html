@@ -1,0 +1,50 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><a routerLink="/">Overview</a><span>›</span><span>QHSE</span></div>
+      <h1>Quality, Health, Safety & Environment</h1>
+      <p>Our commitment to the highest standards of QHSE in all business operations.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="qhse-intro-grid">
+      <div class="reveal-left">
+        <span class="section-tag">Our Commitment</span>
+        <h2 class="section-title" style="text-align:left;">Quality Is Our Core Promise</h2>
+        <div class="divider divider-left"></div>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:16px;">At Project, we believe that the word QUALITY stands for total customer satisfaction delivered through a process of innovative research and continual improvement of our key performance deliverables. This will enable us to maintain credibility in the market for the quality of the products and services delivered at all times in the industry.</p>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:16px;">Project Pvt. Ltd. is committed to high standards of Quality, Health, Safety and Environmental practices in its business operations.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="qhse-pillars">
+          <div class="pillar" *ngFor="let p of [
+            {icon:'🏅',color:'#1a3c5e',t:'Quality',d:'Customer satisfaction through innovation and continuous improvement of key deliverables.'},
+            {icon:'❤️',color:'#ef4444',t:'Health',d:'Ensuring the health and wellbeing of our employees, clients, and communities.'},
+            {icon:'🛡️',color:'#f59e0b',t:'Safety',d:'Zero-compromise approach to safety in manufacturing and logistics operations.'},
+            {icon:'🌿',color:'#10b981',t:'Environment',d:'Responsible practices that minimize environmental impact at every stage.'}
+          ]">
+            <div class="pillar-icon" [style.background]="p.color+'20'">
+              <span>{{p.icon}}</span>
+            </div>
+            <div class="pillar-content">
+              <h4>{{p.t}}</h4>
+              <p>{{p.d}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="regulatory-card reveal" style="margin-top:60px;">
+      <div class="reg-icon">📋</div>
+      <div class="reg-content">
+        <h3>Regulatory Compliance</h3>
+        <p>Project develops innovative solutions that enable you to solve your formulation difficulties. As regulatory compliance is one of our essential commitments, Project's Regulatory Affairs team closely monitors the continuously increasing regulatory requirements around the world.</p>
+        <p>Project promotes the safe use of its products to protect people and the environment. The Material Safety Data Sheets (MSDS's) are the primary vehicle for transmitting health, safety, environmental and disposal information on our products.</p>
+        <p>We expect our customers to understand the nature of the hazards associated with the products, and thus to use the product safely and in compliance with relevant regulations. At Project we are committed to making regulatory compliance easier for you.</p>
+      </div>
+    </div>
+  </div>
+</section>

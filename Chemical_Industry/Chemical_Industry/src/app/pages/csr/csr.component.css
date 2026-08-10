@@ -1,0 +1,8 @@
+.csr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.csr-card{background:white;border:1px solid var(--gray-100);border-radius:16px;padding:32px;box-shadow:var(--shadow-sm);transition:all 0.3s;}
+.csr-card:hover{box-shadow:var(--shadow-xl);transform:translateY(-6px);}
+.csr-icon{font-size:2.5rem;margin-bottom:16px;}
+.csr-card h3{font-size:1.05rem;font-weight:700;color:var(--gray-900);margin-bottom:12px;}
+.csr-card p{font-size:0.875rem;color:var(--gray-500);line-height:1.7;}
+@media(max-width:1024px){.csr-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.csr-grid{grid-template-columns:1fr;}}

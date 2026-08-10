@@ -1,0 +1,340 @@
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles">
+      <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8]" [class]="'particle-' + i"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Specialty Chemical Manufacturer — Est. 2012
+      </div>
+      <h1 class="hero-title reveal">
+        Exploring Chemistry<br>
+        <span class="hero-gradient">for Enriching Lives</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Project is committed to research, development, and manufacturing of specialty chemicals for Oil & Gas, Water Treatment, Polymers, and Pharmaceutical industries.
+      </p>
+      <div class="hero-actions reveal">
+        <a routerLink="/industries/drilling-chemicals" class="btn btn-primary">
+          Explore Products <span>→</span>
+        </a>
+        <a routerLink="/contact" class="btn btn-white">
+          Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="hero-stat">
+          <span class="hero-stat-value">6000+</span>
+          <span class="hero-stat-label">MT/Yr Capacity</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">9+</span>
+          <span class="hero-stat-label">Industry Sectors</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">100+</span>
+          <span class="hero-stat-label">Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="section about-section" id="AboutUs">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-image-wrap">
+          <div class="about-image-main">
+            <div class="about-img-placeholder">
+              <span class="about-icon">🏭</span>
+              <p>the Industrial Area<br>Manufacturing Facility</p>
+            </div>
+          </div>
+          <div class="about-badge-card about-badge-1">
+            <span class="badge-icon">🔬</span>
+            <div>
+              <strong>R&D Since</strong>
+              <span>2013</span>
+            </div>
+          </div>
+          <div class="about-badge-card about-badge-2">
+            <span class="badge-icon">✅</span>
+            <div>
+              <strong>GMP</strong>
+              <span>Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title" style="text-align:left;">Powering Industries<br>Through Chemistry</h2>
+        <div class="divider divider-left"></div>
+        <p class="about-text">
+          Project Pvt. Ltd. is an organization committed to providing research & development, manufacturing and product support for a spectrum of industries related to oil and natural gas sector, water treatment, specialty chemicals, polymers and pharmaceuticals.
+        </p>
+        <p class="about-text">
+          At Project, we believe in the <strong>Power of Chemistry</strong>. We believe in creating enduring products developed through high quality innovation and efficient manufacturing processes with utmost concern towards the Environment, Health & Safety.
+        </p>
+        <p class="about-text">
+          Our manpower consists of professionals with many years of experience in research and development and manufacturing of various chemical entities.
+        </p>
+        <div class="about-actions">
+          <a routerLink="/overview/vision-mission" class="btn btn-primary">Our Vision & Mission</a>
+          <a routerLink="/overview/business-history" class="btn btn-outline">Business History</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATISTICS SECTION ===== -->
+<section class="stats-section">
+  <div class="stats-bg"></div>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal" *ngFor="let stat of stats; let i = index">
+        <div class="stat-value">
+          {{ stat.prefix }}{{ animatedStats[i] | number }}{{ stat.suffix }}
+        </div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDUSTRIES SECTION ===== -->
+<section class="section industries-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">Industries We Serve</h2>
+      <p class="section-subtitle">Comprehensive chemical solutions engineered for demanding industrial applications across multiple sectors.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card reveal" *ngFor="let item of industries; let i = index"
+        [style.animation-delay]="(i * 0.08) + 's'">
+        <div class="industry-icon" [style.background]="item.color + '15'">
+          <span>{{ item.icon }}</span>
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+        <a [routerLink]="item.link" class="industry-link">
+          Explore <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRENGTHS SECTION ===== -->
+<section class="section strengths-section">
+  <div class="strengths-bg"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title" style="color:white;">Our Core Strengths</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7);">What sets Project apart as a trusted specialty chemical partner.</p>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-card reveal" *ngFor="let s of strengths; let i = index"
+        [style.animation-delay]="(i * 0.1) + 's'">
+        <div class="strength-icon">{{ s.icon }}</div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE SECTION ===== -->
+<section class="section timeline-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title">Business History</h2>
+      <p class="section-subtitle">From incorporation to commercial success — milestones that define our growth.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item reveal" *ngFor="let t of timeline; let i = index"
+        [class.right]="i % 2 !== 0">
+        <div class="timeline-content">
+          <div class="timeline-year">{{ t.year }}</div>
+          <p>{{ t.event }}</p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+    <div class="timeline-cta reveal">
+      <a routerLink="/overview/business-history" class="btn btn-primary">Full History</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QHSE HIGHLIGHT SECTION ===== -->
+<section class="section qhse-section">
+  <div class="container">
+    <div class="qhse-grid">
+      <div class="qhse-content reveal-left">
+        <span class="section-tag">Quality Assured</span>
+        <h2 class="section-title" style="text-align:left;">Quality, Health, Safety & Environment</h2>
+        <div class="divider divider-left"></div>
+        <p>
+          At Project, QUALITY stands for total customer satisfaction delivered through innovative research and continual improvement. We are committed to high standards of QHSE practices across all business operations.
+        </p>
+        <p style="margin-top:16px;">
+          Our Regulatory Affairs team closely monitors global compliance requirements. We ensure every product meets stringent health, safety, and environmental standards — backed by detailed Material Safety Data Sheets (MSDS) for all products.
+        </p>
+        <div class="qhse-badges">
+          <div class="qhse-badge">
+            <span>🏅</span>
+            <div><strong>Quality Certification</strong><br>ISO Compliant</div>
+          </div>
+          <div class="qhse-badge">
+            <span>🌿</span>
+            <div><strong>Environmental</strong><br>EHS Committed</div>
+          </div>
+          <div class="qhse-badge">
+            <span>📋</span>
+            <div><strong>Regulatory</strong><br>MSDS Available</div>
+          </div>
+        </div>
+        <a routerLink="/overview/qhse" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="qhse-visual reveal-right">
+        <div class="qhse-card-stack">
+          <div class="qhse-card">
+            <div class="qhse-card-icon">🔬</div>
+            <h4>R&D Excellence</h4>
+            <p>State-of-the-art R&D lab with expert chemists driving innovation.</p>
+          </div>
+          <div class="qhse-card">
+            <div class="qhse-card-icon">🏗️</div>
+            <h4>GMP Manufacturing</h4>
+            <p>GMP-standard manufacturing facility with 6000 MT annual capacity.</p>
+          </div>
+          <div class="qhse-card">
+            <div class="qhse-card-icon">📊</div>
+            <h4>Regulatory Compliance</h4>
+            <p>Proactive monitoring of global regulations for safe product use.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INQUIRY SECTION ===== -->
+<section class="section inquiry-section">
+  <div class="inquiry-bg"></div>
+  <div class="container">
+    <div class="inquiry-grid">
+      <div class="inquiry-info reveal-left">
+        <span class="section-tag">Quick Inquiry</span>
+        <h2 class="section-title" style="text-align:left;color:white;">Let's Build Something<br>Great Together</h2>
+        <p style="color:rgba(255,255,255,0.75); margin-bottom:32px; font-size:1.05rem;">
+          Looking for a specific chemical solution? Tell us your requirements and our team will get back to you promptly.
+        </p>
+        <div class="inquiry-contact-list">
+          <div class="inquiry-contact-item">
+            <span class="ico">📍</span>
+            <div>
+              123 Industrial Area,<br>
+              City, State, Country
+            </div>
+          </div>
+          <div class="inquiry-contact-item">
+            <span class="ico">📞</span>
+            <div>000-0000000 / +91 00000 00000</div>
+          </div>
+          <div class="inquiry-contact-item">
+            <span class="ico">✉️</span>
+            <div>info&#64;project.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inquiry-form-wrap reveal-right">
+        <div class="inquiry-form-card">
+          <h3>Send an Inquiry</h3>
+          <p>Fill in your details and we'll respond within 24 hours.</p>
+
+          <div class="form-success" *ngIf="formSuccess">
+            <span>✅</span>
+            <div>
+              <strong>Inquiry Submitted!</strong>
+              <p>Thank you. Our team will contact you shortly.</p>
+            </div>
+          </div>
+
+          <form [formGroup]="inquiryForm" (ngSubmit)="onInquirySubmit()" *ngIf="!formSuccess">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Your Name *</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Full Name"
+                  [class.error]="formSubmitted && inquiryForm.get('name')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && inquiryForm.get('name')?.invalid">Name is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="your@email.com"
+                  [class.error]="formSubmitted && inquiryForm.get('email')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && inquiryForm.get('email')?.invalid">Valid email required</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" formControlName="phone" placeholder="+91 XXXXX XXXXX"
+                  [class.error]="formSubmitted && inquiryForm.get('phone')?.invalid">
+                <span class="error-msg" *ngIf="formSubmitted && inquiryForm.get('phone')?.invalid">Phone is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" formControlName="company" placeholder="Your Company">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Product / Category of Interest</label>
+              <select class="form-control" formControlName="product">
+                <option value="">Select a product category...</option>
+                <option>Drilling Chemicals</option>
+                <option>Production Chemicals</option>
+                <option>Refinery Chemicals</option>
+                <option>Lubricant Chemicals</option>
+                <option>Fuel Additives</option>
+                <option>Speciality Chemicals & Polymers</option>
+                <option>Water Treatment</option>
+                <option>Custom Manufacturing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea class="form-control" formControlName="message" placeholder="Describe your requirements..."
+                [class.error]="formSubmitted && inquiryForm.get('message')?.invalid"></textarea>
+              <span class="error-msg" *ngIf="formSubmitted && inquiryForm.get('message')?.invalid">Message is required</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Inquiry →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

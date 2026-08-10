@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Oil & Gas</span><span>›</span><span>Refinery Chemicals</span></div>
+      <h1>Refinery Chemicals</h1>
+      <p>Project supplies a range of refinery chemicals engineered to enhance refinery performance.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Oil & Gas — Refinery</span>
+      <h2 class="section-title">Specialty Refinery Chemical Solutions</h2>
+      <p class="section-subtitle">From pour point depressants to antifouling agents, our refinery chemical portfolio supports efficient, safe and high-yield refinery operations.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Refinery</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Seeking custom refinery chemical solutions?</h3>
+        <p>Partner with Project for application-specific additives developed through innovative R&D.</p>
+        <a routerLink="/contact" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

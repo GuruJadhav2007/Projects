@@ -1,0 +1,176 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="header-top" *ngIf="!isScrolled">
+    <div class="container">
+      <div class="header-top-inner">
+        <div class="contact-info">
+          <span>📞 000-0000000 / +91 00000 00000</span>
+          <span>✉️ info&#64;project.com</span>
+        </div>
+        <div class="social-links">
+          <span class="social-tag">Follow Us:</span>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" [class.sticky]="isScrolled">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a routerLink="/" class="logo" (click)="closeAll()">
+          <div class="logo-icon">
+
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Project</span>
+            <span class="logo-sub">Chemicals Pvt. Ltd.</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="nav-links" [class.mobile-open]="isMobileMenuOpen">
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link" (click)="closeAll()">Home</a>
+          </li>
+
+          <li class="nav-item has-dropdown" [class.open]="activeDropdown === 'industries'">
+            <button class="nav-link dropdown-trigger" (click)="toggleDropdown('industries')">
+              Industries We Serve <span class="chevron">›</span>
+            </button>
+            <div class="mega-menu">
+              <div class="mega-menu-inner">
+                <div class="mega-col">
+                  <h4 class="mega-heading">Oil &amp; Gas</h4>
+                  <ul>
+                    <li><a routerLink="/industries/drilling-chemicals" (click)="closeAll()">
+                      <span class="menu-icon">⚙️</span> Drilling Chemicals
+                    </a></li>
+                    <li><a routerLink="/industries/production-chemicals" (click)="closeAll()">
+                      <span class="menu-icon">🏭</span> Production Chemicals
+                    </a></li>
+                    <li><a routerLink="/industries/refinery-chemicals" (click)="closeAll()">
+                      <span class="menu-icon">🔬</span> Refinery Chemicals
+                    </a></li>
+                    <li><a routerLink="/industries/lubricant-chemicals" (click)="closeAll()">
+                      <span class="menu-icon">💧</span> Lubricant Chemicals
+                    </a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4 class="mega-heading">Fuel Additives</h4>
+                  <ul>
+                    <li><a routerLink="/industries/refinery-fuel-additives" (click)="closeAll()">
+                      <span class="menu-icon">⛽</span> Refinery Fuel Additives
+                    </a></li>
+                    <li><a routerLink="/industries/terminal-cargo" (click)="closeAll()">
+                      <span class="menu-icon">🚢</span> Terminal &amp; Cargo Fuel
+                    </a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4 class="mega-heading">Other Industries</h4>
+                  <ul>
+                    <li><a routerLink="/industries/speciality-chemicals" (click)="closeAll()">
+                      <span class="menu-icon">🧪</span> Speciality Chemicals &amp; Polymers
+                    </a></li>
+                    <li><a routerLink="/industries/water-treatment" (click)="closeAll()">
+                      <span class="menu-icon">💦</span> Water Treatment
+                    </a></li>
+                    <li><a routerLink="/industries/custom-manufacturing" (click)="closeAll()">
+                      <span class="menu-icon">🏗️</span> Custom Manufacturing
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown" [class.open]="activeDropdown === 'overview'">
+            <button class="nav-link dropdown-trigger" (click)="toggleDropdown('overview')">
+              Overview <span class="chevron">›</span>
+            </button>
+            <div class="dropdown-menu">
+              <a routerLink="/overview/qhse" (click)="closeAll()">QHSE</a>
+              <a routerLink="/overview/csr" (click)="closeAll()">Corporate Social Responsibilities</a>
+              <a routerLink="/overview/infrastructure" (click)="closeAll()">Infrastructure</a>
+              <a routerLink="/overview/vision-mission" (click)="closeAll()">Vision &amp; Mission</a>
+              <a routerLink="/overview/business-history" (click)="closeAll()">Business History</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/careers" routerLinkActive="active" class="nav-link" (click)="closeAll()">Careers</a>
+          </li>
+
+          <li class="nav-item">
+            <a routerLink="/contact" class="nav-link nav-cta" (click)="closeAll()">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="hamburger" (click)="toggleMobileMenu()" [class.open]="isMobileMenuOpen" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" [class.visible]="isMobileMenuOpen" (click)="closeAll()"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" [class.open]="isMobileMenuOpen">
+    <div class="mobile-drawer-header">
+      <div class="logo">
+        <div class="logo-icon"><img src="Logo.png" alt="Project Logo"></div>
+        <div class="logo-text">
+          <span class="logo-name">Project</span>
+          <span class="logo-sub">Chemicals</span>
+        </div>
+      </div>
+      <button class="close-btn" (click)="closeAll()">✕</button>
+    </div>
+
+    <nav class="mobile-nav">
+      <a routerLink="/" (click)="closeAll()" class="mobile-nav-link">Home</a>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn" (click)="toggleDropdown('m-industries')">
+          Industries We Serve <span [class.rotated]="activeDropdown === 'm-industries'">›</span>
+        </button>
+        <div class="mobile-accordion-content" [class.open]="activeDropdown === 'm-industries'">
+          <h5>Oil &amp; Gas</h5>
+          <a routerLink="/industries/drilling-chemicals" (click)="closeAll()">Drilling Chemicals</a>
+          <a routerLink="/industries/production-chemicals" (click)="closeAll()">Production Chemicals</a>
+          <a routerLink="/industries/refinery-chemicals" (click)="closeAll()">Refinery Chemicals</a>
+          <a routerLink="/industries/lubricant-chemicals" (click)="closeAll()">Lubricant Chemicals</a>
+          <h5>Fuel Additives</h5>
+          <a routerLink="/industries/refinery-fuel-additives" (click)="closeAll()">Refinery Fuel Additives</a>
+          <a routerLink="/industries/terminal-cargo" (click)="closeAll()">Terminal &amp; Cargo Fuel</a>
+          <h5>Other</h5>
+          <a routerLink="/industries/speciality-chemicals" (click)="closeAll()">Speciality Chemicals &amp; Polymers</a>
+          <a routerLink="/industries/water-treatment" (click)="closeAll()">Water Treatment</a>
+          <a routerLink="/industries/custom-manufacturing" (click)="closeAll()">Custom Manufacturing</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="mobile-accordion-btn" (click)="toggleDropdown('m-overview')">
+          Overview <span [class.rotated]="activeDropdown === 'm-overview'">›</span>
+        </button>
+        <div class="mobile-accordion-content" [class.open]="activeDropdown === 'm-overview'">
+          <a routerLink="/overview/qhse" (click)="closeAll()">QHSE</a>
+          <a routerLink="/overview/csr" (click)="closeAll()">Corporate Social Responsibilities</a>
+          <a routerLink="/overview/infrastructure" (click)="closeAll()">Infrastructure</a>
+          <a routerLink="/overview/vision-mission" (click)="closeAll()">Vision &amp; Mission</a>
+          <a routerLink="/overview/business-history" (click)="closeAll()">Business History</a>
+        </div>
+      </div>
+
+      <a routerLink="/careers" (click)="closeAll()" class="mobile-nav-link">Careers</a>
+      <a routerLink="/contact" (click)="closeAll()" class="mobile-nav-link mobile-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>

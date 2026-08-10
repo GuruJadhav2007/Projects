@@ -1,0 +1,125 @@
+<footer class="footer">
+  <!-- Newsletter Strip -->
+  <div class="newsletter-strip">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Stay Updated with Project</h3>
+          <p>Get the latest news, product updates, and industry insights.</p>
+        </div>
+        <form class="newsletter-form" (ngSubmit)="onNewsletterSubmit()">
+          <input type="email" [(ngModel)]="newsletterEmail" name="email"
+            placeholder="Enter your email address" class="newsletter-input">
+          <button type="submit" class="btn btn-gold">Subscribe</button>
+        </form>
+        <p class="newsletter-success" *ngIf="newsletterSubmitted">✅ Thank you for subscribing!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Footer -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Company Info -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><img src="Logo.png" alt="Project Logo"></div>
+            <div>
+              <div class="footer-logo-name">Project</div>
+              <div class="footer-logo-sub">Pvt. Ltd.</div>
+            </div>
+          </div>
+          <p class="footer-tagline">Exploring Chemistry for Enriching Lives</p>
+          <p class="footer-desc">
+            Committed to research, development, manufacturing and product support for oil & gas, water treatment, speciality chemicals, polymers and pharmaceuticals.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
+            <a href="#" aria-label="Twitter" class="social-btn">𝕏</a>
+            <a href="mailto:info@project.com" aria-label="Email" class="social-btn">✉</a>
+          </div>
+        </div>
+
+        <!-- Industries -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries We Serve</h4>
+          <ul class="footer-links">
+            <li><a routerLink="/industries/drilling-chemicals">Drilling Chemicals</a></li>
+            <li><a routerLink="/industries/production-chemicals">Production Chemicals</a></li>
+            <li><a routerLink="/industries/refinery-chemicals">Refinery Chemicals</a></li>
+            <li><a routerLink="/industries/lubricant-chemicals">Lubricant Chemicals</a></li>
+            <li><a routerLink="/industries/refinery-fuel-additives">Refinery Fuel Additives</a></li>
+            <li><a routerLink="/industries/terminal-cargo">Terminal & Cargo Fuel</a></li>
+            <li><a routerLink="/industries/speciality-chemicals">Speciality Chemicals</a></li>
+            <li><a routerLink="/industries/water-treatment">Water Treatment</a></li>
+            <li><a routerLink="/industries/custom-manufacturing">Custom Manufacturing</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/overview/vision-mission">Vision & Mission</a></li>
+            <li><a routerLink="/overview/business-history">Business History</a></li>
+            <li><a routerLink="/overview/qhse">QHSE</a></li>
+            <li><a routerLink="/overview/infrastructure">Infrastructure</a></li>
+            <li><a routerLink="/overview/csr">Corporate Social Responsibilities</a></li>
+            <li><a routerLink="/careers">Careers</a></li>
+            <li><a routerLink="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Project Pvt. Ltd.</strong><br>
+                123 Industrial Area<br>
+                Industrial Zone, City,<br>
+                State, Country
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <a href="tel:0000000000">000-0000000</a><br>
+                <a href="tel:0000000000">+91 00000 00000</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <a href="mailto:info@project.com">info&#64;project.com</a><br>
+                <a href="mailto:hrd@project.com">hrd&#64;project.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>© {{ currentYear }} Project Pvt. Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <span>Incorporated in India, 2012</span>
+          <span>•</span>
+          <span>ISO Certified</span>
+          <span>•</span>
+          <span>GMP Manufacturing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,34 @@
+<div class="page-hero">
+  <div class="deco-circle" style="width:400px;height:400px;top:-150px;right:-80px;"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a routerLink="/">Home</a><span>›</span><span>Industries</span><span>›</span><span>Fuel Additives</span><span>›</span><span>Terminal & Cargo</span></div>
+      <h1>Terminal & Cargo Fuel Treatments</h1>
+      <p>Specialized fuel treatment chemicals for terminal operations, cargo transfer and marine fuel management.</p>
+    </div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="industry-intro reveal">
+      <span class="section-tag">Fuel Additives — Terminal</span>
+      <h2 class="section-title">Terminal & Cargo Fuel Treatment Solutions</h2>
+      <p class="section-subtitle">Our terminal and cargo fuel treatment products ensure fuel quality integrity throughout the supply chain — from storage to delivery.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal" *ngFor="let p of products">
+        <div class="pc-top"><span class="pc-tag">Terminal</span></div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <a routerLink="/contact" class="pc-inquiry">Request Inquiry →</a>
+      </div>
+    </div>
+    <div class="industry-cta reveal">
+      <div class="cta-inner">
+        <h3>Optimize your terminal fuel operations</h3>
+        <p>Speak with our specialists for tailored solutions for your terminal and cargo fuel treatment needs.</p>
+        <a routerLink="/contact" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.contact-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.contact-card{background:white;border:1px solid var(--gray-100);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm);text-align:center;transition:all 0.3s;}
+.contact-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px);border-color:var(--accent);}
+.cc-icon{font-size:2.2rem;margin-bottom:14px;}
+.contact-card h3{font-size:1rem;font-weight:700;color:var(--gray-900);margin-bottom:10px;}
+.contact-card p{font-size:0.875rem;color:var(--gray-500);line-height:1.6;}
+.contact-card a{color:var(--primary-light);font-weight:500;}
+.contact-card a:hover{color:var(--accent);}
+
+.contact-main-section{background:var(--gray-50);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;}
+.map-placeholder{background:linear-gradient(135deg,#0f2440,#1a3c5e,#2563a8);border-radius:20px;min-height:480px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);}
+.map-content{text-align:center;color:white;padding:40px;}
+.map-content span{font-size:3rem;display:block;margin-bottom:16px;}
+.map-content h3{font-size:1.3rem;margin-bottom:12px;color:white;}
+.map-content p{color:rgba(255,255,255,0.7);line-height:1.6;font-size:0.9rem;}
+
+.contact-form-card{background:white;border-radius:20px;padding:40px;box-shadow:var(--shadow-md);}
+.contact-form-card h2{font-size:1.5rem;font-weight:800;color:var(--gray-900);margin-bottom:8px;}
+.contact-form-card > p{color:var(--gray-500);font-size:0.9rem;margin-bottom:28px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-success{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;}
+.form-success span{font-size:1.4rem;}
+.form-success strong{display:block;color:var(--green);font-weight:700;}
+.form-success p{font-size:0.875rem;color:var(--gray-600);margin-top:2px;}
+
+@media(max-width:1024px){.contact-cards-grid{grid-template-columns:repeat(2,1fr);} .contact-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.contact-cards-grid{grid-template-columns:1fr;} .form-row-2{grid-template-columns:1fr;}}
