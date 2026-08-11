@@ -1,0 +1,25 @@
+<section id="about" class="section">
+  <div class="section-inner">
+    <span class="section-label">About Me</span>
+    <h2 class="section-title reveal" appearOnScroll>Get to know me</h2>
+
+    <div class="about-grid">
+      <p class="about-text reveal" appearOnScroll>
+        I'm a developer who enjoys turning ideas into clean, working
+        interfaces. I care about readable code, clear layouts, and
+        just enough animation to make an interface feel alive without
+        getting in the way. Right now I'm focused on Angular,
+        TypeScript, and building projects worth sharing.
+      </p>
+
+      <div class="about-stats">
+        @for (stat of stats; track stat.label) {
+          <div class="stat-card reveal" appearOnScroll>
+            <span class="stat-value gradient-text">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

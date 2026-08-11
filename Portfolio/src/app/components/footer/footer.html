@@ -1,0 +1,13 @@
+<footer class="footer" (window:scroll)="onWindowScroll()">
+  <p>Built with Angular</p>
+  <p>@{{ year }} Guruprasad Jadhav. All rights reserved.</p>
+</footer>
+
+<button
+  class="back-to-top"
+  [class.visible]="showTopBtn()"
+  (click)="scrollToTop()"
+  aria-label="Back to top"
+>
+  ↑
+</button>

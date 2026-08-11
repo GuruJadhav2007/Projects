@@ -1,0 +1,119 @@
+/* =========================================================
+   GLOBAL STYLES — clean, simple, attractive dark portfolio
+   One accent gradient (indigo -> violet), soft cards, gentle
+   scroll animations. Nothing fancy or "themed" — just clean.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Backgrounds */
+  --bg: #faf5ee;
+  --bg-soft: #f5ede2;
+  --surface: #fffdf9;
+  --surface-border:#e8dccb;
+
+  /* Text */
+  --text:  #4a4038;
+  --text-strong: #a07846;
+  --text-muted: #8c8072;
+
+  /* One accent, used as a gradient */
+  --accent-1:  #e2653f; 
+  --accent-2:  #f3a56a; 
+  --accent-grad: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+
+  --max-width: 1100px;
+  --radius: 14px;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--text-strong); line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; }
+::selection { background: var(--accent-1); color: #fff; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+/* Reusable gradient text, used sparingly (name, key words) */
+.gradient-text {
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* -------- Layout -------- */
+.section {
+  padding: 6rem 1.5rem;
+  border-top: 1px solid var(--surface-border);
+}
+.section-inner { max-width: var(--max-width); margin: 0 auto; }
+.section-alt { background: var(--bg-soft); }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* -------- Buttons -------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent-grad);
+  color: #fff;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px -10px rgba(99, 102, 241, 0.55); }
+
+.btn-outline {
+  border: 1px solid var(--surface-border);
+  color: var(--text);
+}
+.btn-outline:hover { border-color: var(--accent-2); color: var(--accent-2); transform: translateY(-2px); }
+
+/* -------- Scroll reveal -------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}

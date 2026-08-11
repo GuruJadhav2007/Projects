@@ -1,0 +1,27 @@
+<section id="skills" class="section section-alt">
+  <div class="section-inner">
+    <span class="section-label">Skills</span>
+    <h2 class="section-title reveal" appearOnScroll>Tools I work with</h2>
+
+    <div class="constellation">
+      @for (group of groups; track group.title; let gi = $index) {
+        <div class="star-group reveal" appearOnScroll [style.transition-delay]="(gi * 100) + 'ms'">
+          <div class="group-node">
+            <span class="node-icon">{{ group.icon }}</span>
+            <span class="node-title">{{ group.title }}</span>
+          </div>
+
+          <div class="branch-list">
+            @for (item of group.items; track item; let ii = $index) {
+              <div class="branch">
+                <span class="branch-line"></span>
+                <span class="branch-star">✦</span>
+                <span class="branch-label">{{ item }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

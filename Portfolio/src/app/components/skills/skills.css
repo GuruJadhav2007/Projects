@@ -1,0 +1,79 @@
+.constellation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.star-group {
+  position: relative;
+}
+
+.group-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  background: var(--accent-grad);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 10px 24px -10px var(--accent-1);
+}
+
+.node-icon { font-size: 1.05rem; }
+
+.branch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-left: 0.6rem;
+  border-left: 2px dashed var(--surface-border);
+  margin-left: 1.3rem;
+}
+
+.branch {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.branch:hover {
+  transform: translateX(6px);
+}
+
+.branch-line {
+  width: 22px;
+  height: 2px;
+  background: var(--surface-border);
+  flex-shrink: 0;
+}
+
+.branch-star {
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.branch:hover .branch-star {
+  color: var(--accent-1);
+  transform: scale(1.3) rotate(20deg);
+}
+
+.branch-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.branch:hover .branch-label {
+  color: var(--text-strong);
+}
+
+@media (max-width: 640px) {
+  .constellation { grid-template-columns: 1fr; }
+}

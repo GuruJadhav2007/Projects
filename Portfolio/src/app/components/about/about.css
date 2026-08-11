@@ -1,0 +1,21 @@
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
+.about-text { font-size: 1.05rem; color: var(--text); max-width: 52ch; }
+.about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1rem;
+  text-align: center;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.stat-card:hover { border-color: var(--accent-1); transform: translateY(-4px); }
+
+.stat-value { display: block; font-family: var(--font-heading); font-size: 1.7rem; font-weight: 700; }
+.stat-label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+@media (max-width: 780px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
+}

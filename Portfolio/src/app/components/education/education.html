@@ -1,0 +1,16 @@
+<section id="education" class="section">
+  <div class="section-inner">
+    <span class="section-label">Education</span>
+    <h2 class="section-title reveal" appearOnScroll>My academic background</h2>
+
+    <div class="edu-grid">
+      @for (degree of degrees; track degree.title) {
+        <div class="edu-card reveal" appearOnScroll>
+          <h3>{{ degree.title }}</h3>
+          <p class="school">{{ degree.school }}</p>
+          <span class="period">{{ degree.period }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

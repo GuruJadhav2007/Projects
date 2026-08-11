@@ -1,0 +1,51 @@
+<section id="projects" class="section">
+  <div class="section-inner">
+    <span class="section-label">Portfolio</span>
+    <h2 class="section-title reveal" appearOnScroll>Featured Projects</h2>
+
+    <div class="project-grid">
+      @for (project of projects; track project.title; let i = $index) {
+      <article class="browser-card reveal" appearOnScroll [style.transition-delay]="(i * 90) + 'ms'">
+        <!-- Fake browser chrome -->
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="browser-url">{{ project.previewUrl }}</div>
+        </div>
+
+        <!-- Live iframe preview -->
+        <div class="browser-viewport">
+          <iframe [src]="project.safePreviewUrl" loading="lazy" [title]="project.title + ' preview'"
+            sandbox="allow-scripts allow-same-origin"></iframe>
+          <a class="viewport-overlay" [href]="project.liveUrl || project.previewUrl" target="_blank" rel="noopener">
+            <span>Open Live Site ↗</span>
+          </a>
+        </div>
+
+        <div class="browser-info">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+
+          <div class="tag-row">
+            @for (tag of project.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+            }
+          </div>
+
+          <div class="card-links">
+            @if (project.liveUrl) {
+            <a class="btn btn-primary btn-sm" [href]="project.liveUrl" target="_blank" rel="noopener">Live Demo</a>
+            }
+            @if (project.codeUrl) {
+            <a class="btn btn-outline btn-sm" [href]="project.codeUrl" target="_blank" rel="noopener">Code</a>
+            }
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>
